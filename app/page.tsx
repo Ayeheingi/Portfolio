@@ -9,20 +9,24 @@ const projects = [
     description: "Next.js と TypeScript を使用して開発している漢字学習アプリです。漢字の意味や読み方を学べるフラッシュカード機能とクイズ機能を実装しています。",
     stack: ["Next.js", "TypeScript"], image: "/images/projects/kanji-sakura.png", imageAlt: "Kanji Sakura 漢字学習画面",
     repository: "https://github.com/Ayeheingi/kanji-sakura", live: "https://kanji-sakura.vercel.app", tone: "violet",
+    responsibility: "画面設計・レスポンシブ対応・学習フローの実装",
+    learned: "TypeScriptでの型設計と、使いやすい学習体験の組み立て方を学びました。",
   },
   {
     number: "02", title: "WELCOME Myanmar", type: "ミャンマー観光紹介サイト",
     description: "HTML と CSS を使用して制作したミャンマー観光紹介サイトです。ミャンマーの観光地や文化、食べ物について紹介しています。",
     stack: ["HTML", "CSS"], image: "/images/projects/welcome-myanmar.jpg", imageAlt: "ミャンマー・バガンの風景",
     repository: "https://github.com/Ayeheingi/Myanmar", live: "https://ayeheingi.github.io/Myanmar/", tone: "lime",
+    responsibility: "情報収集・ページ構成・レスポンシブCSS",
+    learned: "情報量の多い観光コンテンツを、分かりやすく整理して伝える方法を学びました。",
   },
 ];
 
 const skillGroups = [
-  { title: "Front-End", items: ["HTML", "CSS", "TypeScript", "React", "Next.js"] },
-  { title: "CMS", items: ["microCMS"] },
-  { title: "Tools", items: ["Git", "GitHub", "VS Code"] },
-  { title: "Certifications", items: ["JLPT N2", "Java SE Bronze", "CompTIA Tech+"] },
+  { title: "Front-End", level: "制作経験あり / 学習中", items: ["HTML", "CSS", "TypeScript", "React", "Next.js"] },
+  { title: "CMS", level: "基礎・学習中", items: ["microCMS"] },
+  { title: "Tools", level: "日常的に使用", items: ["Git", "GitHub", "VS Code"] },
+  { title: "Certifications", level: "取得済み", items: ["JLPT N2", "Java SE Bronze", "CompTIA Tech+"] },
 ];
 
 const strengths = [
@@ -40,6 +44,10 @@ export default function HomePage() {
         <nav className={styles.nav} aria-label="メインナビゲーション">
           <a href="#about">About</a><a href="#profile">Profile</a><a href="#work">Work</a><a href="#skills">Skill</a><a href="#contact">Contact</a>
         </nav>
+        <details className={styles.mobileNav}>
+          <summary>Menu</summary>
+          <div><a href="#about">About</a><a href="#profile">Profile</a><a href="#work">Work</a><a href="#skills">Skill</a><a href="#contact">Contact</a></div>
+        </details>
         <a className={styles.headerCta} href="mailto:w25002@gmail.com">Contact <span>↗</span></a>
       </header>
 
@@ -71,11 +79,11 @@ export default function HomePage() {
 
       <section className={styles.work} id="work">
         <div className={styles.sectionTop}><div><p className={styles.sectionNumber}>WORK</p><h2>制作したWebサイト。</h2></div><p>学んだ技術を使い、実際に動くWebサイトやアプリケーションの制作に取り組んでいます。</p></div>
-        <div className={styles.projectGrid}>{projects.map((project) => <article className={`${styles.project} ${styles[project.tone]}`} key={project.title}><div className={styles.projectVisual}><span className={styles.projectNumber}>{project.number}</span><Image src={`${basePath}${project.image}`} alt={project.imageAlt} fill sizes="(max-width: 820px) 100vw, 50vw" className={styles.projectImage} /></div><p className={styles.projectType}>{project.type}</p><h3>{project.title}</h3><p className={styles.projectDescription}>{project.description}</p><div className={styles.tags}>{project.stack.map((item) => <span key={item}>{item}</span>)}</div><div className={styles.projectLinks}><a href={project.repository} target="_blank" rel="noreferrer">GitHub ↗</a>{project.live && <a href={project.live} target="_blank" rel="noreferrer">Live Site ↗</a>}</div></article>)}</div>
+        <div className={styles.projectGrid}>{projects.map((project) => <article className={`${styles.project} ${styles[project.tone]}`} key={project.title}><div className={styles.projectVisual}><span className={styles.projectNumber}>{project.number}</span><Image src={`${basePath}${project.image}`} alt={project.imageAlt} fill sizes="(max-width: 820px) 100vw, 50vw" className={styles.projectImage} /></div><p className={styles.projectType}>{project.type}</p><h3>{project.title}</h3><p className={styles.projectDescription}>{project.description}</p><dl className={styles.projectDetails}><div><dt>担当</dt><dd>{project.responsibility}</dd></div><div><dt>学んだこと</dt><dd>{project.learned}</dd></div></dl><div className={styles.tags}>{project.stack.map((item) => <span key={item}>{item}</span>)}</div><div className={styles.projectLinks}><a href={project.repository} target="_blank" rel="noreferrer">GitHub ↗</a>{project.live && <a href={project.live} target="_blank" rel="noreferrer">Live Site ↗</a>}</div></article>)}</div>
       </section>
 
       <section className={styles.skills} id="skills">
-        <p className={styles.sectionNumber}>SKILL</p><div className={styles.skillsGrid}><h2>基礎から、<br /><em>一歩ずつ。</em></h2><div className={styles.skillGroups}>{skillGroups.map((group) => <div className={styles.skillGroup} key={group.title}><h3>{group.title}</h3><div>{group.items.map((item) => <span key={item}>{item}</span>)}</div></div>)}</div></div>
+        <p className={styles.sectionNumber}>SKILL</p><div className={styles.skillsGrid}><h2>基礎から、<br /><em>一歩ずつ。</em></h2><div className={styles.skillGroups}>{skillGroups.map((group) => <div className={styles.skillGroup} key={group.title}><div className={styles.skillHeading}><h3>{group.title}</h3><small>{group.level}</small></div><div>{group.items.map((item) => <span key={item}>{item}</span>)}</div></div>)}</div></div>
       </section>
 
       <section className={styles.strengths} id="strengths">
@@ -91,6 +99,7 @@ export default function HomePage() {
         <p className={styles.contactLabel}>CONTACT</p>
         <h2>Webエンジニアへの<br /><em>第一歩を探しています。</em></h2>
         <p className={styles.contactLead}>現在Webプログラミングを学んでおり、未経験から成長できる機会を探しています。採用やインターンシップについて、お気軽にご連絡ください。</p>
+        <dl className={styles.jobFacts}><div><dt>希望職種</dt><dd>Webエンジニア</dd></div><div><dt>希望勤務地</dt><dd>日本国内</dd></div><div><dt>言語</dt><dd>ミャンマー語・日本語・英語</dd></div></dl>
         <a href="mailto:w25002@gmail.com">メールを送る <span>↗</span></a>
         <small>w25002@gmail.com</small>
       </section>

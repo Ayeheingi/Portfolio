@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function SkillPage() {
-  redirect("/#skill");
+  redirect(`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/#skills`);
 }
