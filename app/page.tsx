@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const projects = [
   {
     number: "01", title: "Kanji Sakura", type: "漢字学習アプリ",
@@ -48,7 +50,7 @@ export default function HomePage() {
           <p className={styles.intro}>人の役に立つWebシステムやサービスを作る、フルスタックエンジニアを目指しています。</p>
           <div className={styles.heroActions}><a className={styles.primaryButton} href="#work">制作物を見る <span>↓</span></a><a className={styles.textLink} href="https://github.com/Ayeheingi" target="_blank" rel="noreferrer">GitHub ↗</a></div>
         </div>
-        <div className={styles.heroPhoto}><Image src="/images/hero-study-desk.png" alt="沖縄の明るい窓辺にあるWebプログラミング学習デスク" fill priority sizes="(max-width: 820px) 100vw, 50vw" /></div>
+        <div className={styles.heroPhoto}><Image src={`${basePath}/images/hero-study-desk.png`} alt="沖縄の明るい窓辺にあるWebプログラミング学習デスク" fill priority sizes="(max-width: 820px) 100vw, 50vw" /></div>
       </section>
 
       <section className={styles.about} id="about">
@@ -69,7 +71,7 @@ export default function HomePage() {
 
       <section className={styles.work} id="work">
         <div className={styles.sectionTop}><div><p className={styles.sectionNumber}>WORK</p><h2>制作したWebサイト。</h2></div><p>学んだ技術を使い、実際に動くWebサイトやアプリケーションの制作に取り組んでいます。</p></div>
-        <div className={styles.projectGrid}>{projects.map((project) => <article className={`${styles.project} ${styles[project.tone]}`} key={project.title}><div className={styles.projectVisual}><span className={styles.projectNumber}>{project.number}</span><Image src={project.image} alt={project.imageAlt} fill sizes="(max-width: 820px) 100vw, 50vw" className={styles.projectImage} /></div><p className={styles.projectType}>{project.type}</p><h3>{project.title}</h3><p className={styles.projectDescription}>{project.description}</p><div className={styles.tags}>{project.stack.map((item) => <span key={item}>{item}</span>)}</div><div className={styles.projectLinks}><a href={project.repository} target="_blank" rel="noreferrer">GitHub ↗</a>{project.live && <a href={project.live} target="_blank" rel="noreferrer">Live Site ↗</a>}</div></article>)}</div>
+        <div className={styles.projectGrid}>{projects.map((project) => <article className={`${styles.project} ${styles[project.tone]}`} key={project.title}><div className={styles.projectVisual}><span className={styles.projectNumber}>{project.number}</span><Image src={`${basePath}${project.image}`} alt={project.imageAlt} fill sizes="(max-width: 820px) 100vw, 50vw" className={styles.projectImage} /></div><p className={styles.projectType}>{project.type}</p><h3>{project.title}</h3><p className={styles.projectDescription}>{project.description}</p><div className={styles.tags}>{project.stack.map((item) => <span key={item}>{item}</span>)}</div><div className={styles.projectLinks}><a href={project.repository} target="_blank" rel="noreferrer">GitHub ↗</a>{project.live && <a href={project.live} target="_blank" rel="noreferrer">Live Site ↗</a>}</div></article>)}</div>
       </section>
 
       <section className={styles.skills} id="skills">
