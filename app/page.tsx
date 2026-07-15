@@ -90,7 +90,7 @@ export default function HomePage() {
       </section>
 
       <section className={styles.contact} id="contact">
-        <p className={styles.contactLabel}>お問い合わせ</p><h2>Webエンジニアへの<br /><em>第一歩を探しています。</em></h2><p className={styles.contactLead}>現在Webプログラミングを学んでおり、未経験から成長できる機会を探しています。採用やインターンシップについて、お気軽にご連絡ください。</p><dl className={styles.jobFacts}><div><dt>希望職種</dt><dd>Webエンジニア</dd></div><div><dt>希望勤務地</dt><dd>日本国内</dd></div><div><dt>言語</dt><dd>ミャンマー語・日本語・英語</dd></div></dl><a href="mailto:w25002@gmail.com">メールを送る <span>↗</span></a><small>w25002@gmail.com</small>
+        <p className={styles.contactLabel}>お問い合わせ</p><h2>Webエンジニアへの<br /><em>第一歩を探しています。</em></h2><p className={styles.contactLead}>現在Webプログラミングを学んでおり、未経験から成長できる機会を探しています。採用やインターンシップについて、お気軽にご連絡ください。</p><dl className={styles.jobFacts}><div><dt>希望職種</dt><dd>Webエンジニア</dd></div><div><dt>希望勤務地</dt><dd>日本国内</dd></div><div><dt>言語</dt><dd>ミャンマー語・日本語</dd></div></dl><a href="mailto:w25002@gmail.com">メールを送る <span>↗</span></a><small>w25002@gmail.com</small>
       </section>
       <footer className={styles.footer}><p>© 2026 AYE THEINGI</p><p>沖縄でWebプログラミングを勉強中</p><a href="#top">ページ上部へ ↑</a></footer>
     </main>
