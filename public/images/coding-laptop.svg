@@ -1,0 +1,115 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .person { animation: floatPerson 4s ease-in-out infinite; transform-origin: center; }
+    .screen { animation: screenGlow 2.4s ease-in-out infinite alternate; }
+    .line1 { animation: typeLine1 2.4s ease-in-out infinite; transform-origin: left; }
+    .line2 { animation: typeLine2 2.8s ease-in-out infinite; transform-origin: left; }
+    .line3 { animation: typeLine3 3.2s ease-in-out infinite; transform-origin: left; }
+    .icon { animation: iconFloat 3s ease-in-out infinite; }
+    .iconTwo { animation-delay: .45s; }
+    .iconThree { animation-delay: .9s; }
+    .spark { animation: blink 1.8s ease-in-out infinite; transform-origin: center; }
+    .sparkTwo { animation-delay: .55s; }
+    @keyframes floatPerson {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-16px); }
+    }
+    @keyframes screenGlow {
+      from { opacity: .78; }
+      to { opacity: 1; }
+    }
+    @keyframes typeLine1 {
+      0%, 100% { transform: scaleX(.42); }
+      50% { transform: scaleX(1); }
+    }
+    @keyframes typeLine2 {
+      0%, 100% { transform: scaleX(1); }
+      50% { transform: scaleX(.55); }
+    }
+    @keyframes typeLine3 {
+      0%, 100% { transform: scaleX(.7); }
+      50% { transform: scaleX(1); }
+    }
+    @keyframes iconFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(3deg); }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: .25; transform: scale(.85); }
+      50% { opacity: 1; transform: scale(1.08); }
+    }
+  </style>
+
+  <rect width="900" height="1100" rx="40" fill="#FDF8EF"/>
+  <circle cx="176" cy="238" r="108" fill="#DDF1EE"/>
+  <circle cx="739" cy="260" r="126" fill="#F7D7C8"/>
+  <circle cx="193" cy="892" r="138" fill="#F7E7B9"/>
+  <path d="M149 512C156 350 289 214 456 214C626 214 759 351 759 521C759 692 621 824 449 824C278 824 142 686 149 512Z" fill="#EAF4F3"/>
+
+  <g class="icon" transform="translate(128 384)">
+    <rect width="124" height="86" rx="18" fill="#17202A"/>
+    <rect x="14" y="14" width="96" height="48" rx="8" fill="#26313D"/>
+    <path d="M48 31L30 43L48 55" stroke="#78C6A3" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M76 31L94 43L76 55" stroke="#CC4F2F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="43" y="72" width="39" height="8" rx="4" fill="#26313D"/>
+  </g>
+
+  <g class="icon iconTwo" transform="translate(675 430)">
+    <rect width="118" height="92" rx="20" fill="#0F6B63"/>
+    <rect x="18" y="20" width="82" height="12" rx="6" fill="#FDF8EF"/>
+    <rect x="18" y="44" width="56" height="12" rx="6" fill="#F2B35F"/>
+    <rect x="18" y="68" width="72" height="12" rx="6" fill="#A8DADC"/>
+  </g>
+
+  <g class="icon iconThree" transform="translate(653 675)">
+    <circle cx="58" cy="58" r="58" fill="#CC4F2F"/>
+    <path d="M39 35L22 58L39 81" stroke="#FDF8EF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M77 35L94 58L77 81" stroke="#FDF8EF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g class="person">
+    <path d="M304 759C318 635 376 558 450 558C525 558 583 636 597 759H304Z" fill="#0F6B63"/>
+    <path d="M342 640C369 680 403 700 450 700C497 700 533 679 559 640C536 588 497 558 450 558C403 558 365 588 342 640Z" fill="#176F67"/>
+
+    <path d="M289 377C289 279 361 205 454 205C548 205 615 279 615 378V459H289V377Z" fill="#2B3144"/>
+    <path d="M326 385C326 306 382 250 454 250C527 250 578 306 578 386V450C578 521 523 576 452 576C381 576 326 521 326 450V385Z" fill="#F2BBA8"/>
+    <path d="M323 390C375 371 422 335 452 279C492 341 533 374 583 389C579 309 528 250 454 250C379 250 327 310 323 390Z" fill="#A9572B"/>
+
+    <circle cx="382" cy="433" r="34" fill="#FDF8EF" stroke="#17202A" stroke-width="8"/>
+    <circle cx="522" cy="433" r="34" fill="#FDF8EF" stroke="#17202A" stroke-width="8"/>
+    <path d="M416 433H488" stroke="#17202A" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="382" cy="433" r="8" fill="#17202A"/>
+    <circle cx="522" cy="433" r="8" fill="#17202A"/>
+    <path d="M438 469C443 475 460 475 466 469" stroke="#17202A" stroke-width="7" stroke-linecap="round"/>
+
+    <path d="M279 782C220 758 189 707 203 667C216 629 261 621 304 653L338 729L279 782Z" fill="#F2BBA8"/>
+    <path d="M621 782C680 758 711 707 697 667C684 629 639 621 596 653L562 729L621 782Z" fill="#F2BBA8"/>
+
+    <rect x="220" y="696" width="460" height="264" rx="24" fill="#17202A"/>
+    <rect class="screen" x="250" y="724" width="400" height="178" rx="14" fill="#102C3D"/>
+    <rect x="268" y="742" width="364" height="14" rx="7" fill="#335469"/>
+    <circle cx="286" cy="749" r="5" fill="#CC4F2F"/>
+    <circle cx="304" cy="749" r="5" fill="#F2B35F"/>
+    <circle cx="322" cy="749" r="5" fill="#78C6A3"/>
+
+    <g transform="translate(284 786)">
+      <rect class="line1" x="0" y="0" width="180" height="12" rx="6" fill="#78C6A3"/>
+      <rect x="0" y="30" width="70" height="12" rx="6" fill="#CC4F2F"/>
+      <rect class="line2" x="88" y="30" width="236" height="12" rx="6" fill="#F7D5C7"/>
+      <rect x="0" y="60" width="138" height="12" rx="6" fill="#F2B35F"/>
+      <rect class="line3" x="156" y="60" width="172" height="12" rx="6" fill="#A8DADC"/>
+      <rect class="line1" x="0" y="90" width="300" height="12" rx="6" fill="#78C6A3"/>
+    </g>
+
+    <path d="M173 960H727" stroke="#17202A" stroke-width="24" stroke-linecap="round"/>
+    <path d="M246 920H654L620 976H281L246 920Z" fill="#26313D"/>
+    <path d="M365 942H535" stroke="#44515E" stroke-width="13" stroke-linecap="round"/>
+  </g>
+
+  <g class="spark">
+    <path d="M177 169L191 198L220 212L191 226L177 255L163 226L134 212L163 198L177 169Z" fill="#CC4F2F"/>
+  </g>
+  <g class="spark sparkTwo">
+    <path d="M748 140L760 164L784 176L760 188L748 212L736 188L712 176L736 164L748 140Z" fill="#0F6B63"/>
+  </g>
+</svg>
